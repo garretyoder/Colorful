@@ -1,10 +1,24 @@
 # Colorful
-
+[![Release](https://jitpack.io/v/garretyoder/Colorful.svg)](https://jitpack.io/#garretyoder/Colorful)
 ## Screenshots
 ![Image](screenshots/art1.png)![Image](screenshots/art2.png)
 
 ## Installation
-
+Add jitpack to your maven sources
+```
+allprojects {
+		repositories {
+			...
+			maven { url "https://jitpack.io" }
+		}
+	}
+```
+Add Colorful as a dependency to your `build.gradle`
+```
+dependencies {
+	        compile 'com.github.garretyoder:Colorful:0.1'
+	}
+```
 
 ## Usage
 In your `Application class`, you must initialize Colorful
