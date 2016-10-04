@@ -1,12 +1,20 @@
 # Colorful
 
-## Screenshots
-![Image](screenshots/art1.png)![Image](screenshots/art2.png)
+Colorful is a dynamic theme library allowing you to change your apps' color schemes easily.
+
+
+## License
+
+Colorful is licensed under the Apache 2.0 License, in common Android style.
+
+Copyright 2016 Garret Yoder
+
 
 ## Installation
 
 
 ## Usage
+
 In your `Application class`, you must initialize Colorful
 ```java
 public class SampleApp extends Application {
@@ -48,6 +56,7 @@ After which you must call `Colorful.Config.apply(Context);` to save your changes
 Colorful will handle saving and loading your theme preferences for you.
 
 ## Color Chooser
+
 Colorful has a inbuilt color chooser dialog that will return a `ThemeColor` object you can pass directly to Cluttr
 ```java
 public class MainActivity extends CActivity {
@@ -70,4 +79,6 @@ public class MainActivity extends CActivity {
 }
 ```
 
-       
+
+## Screenshots
+![Image](screenshots/art1.png)![Image](screenshots/art2.png)
