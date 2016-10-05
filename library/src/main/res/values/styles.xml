@@ -6,7 +6,7 @@
     </style>
     <style name="Colorful.Dark" parent="Theme.AppCompat.NoActionBar">
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
-    <style>
+    </style>
 
     <!--red-->
     <style name="LIGHT0T0" parent="Colorful.Light">
