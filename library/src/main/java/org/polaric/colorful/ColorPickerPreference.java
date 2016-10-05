@@ -33,7 +33,9 @@ public class ColorPickerPreference extends Preference implements ColorPickerDial
                     .accentColor(color)
                     .apply();
         }
-        getOnPreferenceChangeListener().onPreferenceChange(this, null);
+        if (getOnPreferenceChangeListener()!=null) {
+            getOnPreferenceChangeListener().onPreferenceChange(this, color);
+        }
     }
 
     @Override
