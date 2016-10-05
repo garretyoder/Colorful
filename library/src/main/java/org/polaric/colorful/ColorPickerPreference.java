@@ -1,10 +1,9 @@
 package org.polaric.colorful;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.preference.Preference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
-import android.view.View;
-import android.view.ViewGroup;
 
 public class ColorPickerPreference extends Preference implements ColorPickerDialog.OnColorSelectedListener {
     private boolean primary;
@@ -26,7 +25,6 @@ public class ColorPickerPreference extends Preference implements ColorPickerDial
     @Override
     public void onColorSelected(Colorful.ThemeColor color) {
         if (primary) {
-            System.out.println(primary + " " + accent);
             Colorful.Config.primaryColor(color);
             Colorful.Config.apply(getContext());
         } else if (accent) {
@@ -36,14 +34,13 @@ public class ColorPickerPreference extends Preference implements ColorPickerDial
     }
 
     @Override
-    protected View onCreateView(ViewGroup parent) {
-        View root = super.onCreateView(parent);
+    public void onBindViewHolder(PreferenceViewHolder holder) {
+        super.onBindViewHolder(holder);
         if (primary) {
-            ((CircularView) root.findViewById(R.id.color_indicator)).setColor(getContext().getResources().getColor(Colorful.getThemeDelegate().getPrimaryColor().getColorRes()));
+            ((CircularView) holder.findViewById(R.id.color_indicator)).setColor(getContext().getResources().getColor(Colorful.getThemeDelegate().getPrimaryColor().getColorRes()));
         } else if (accent) {
-            ((CircularView) root.findViewById(R.id.color_indicator)).setColor(getContext().getResources().getColor(Colorful.getThemeDelegate().getAccentColor().getColorRes()));
+            ((CircularView) holder.findViewById(R.id.color_indicator)).setColor(getContext().getResources().getColor(Colorful.getThemeDelegate().getAccentColor().getColorRes()));
         }
-        return root;
     }
 
     @Override

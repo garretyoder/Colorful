@@ -1,8 +1,8 @@
 package org.polaric.colorful;
 
 import android.content.Context;
-import android.preference.PreferenceManager;
 import android.support.annotation.ColorRes;
+import android.support.v7.preference.PreferenceManager;
 import android.util.Log;
 
 public class Colorful {
@@ -15,7 +15,7 @@ public class Colorful {
 
     public static void init(Context context) {
         Log.d(Util.LOG_TAG,"Attatching to " + context.getPackageName());
-        themeString=PreferenceManager.getDefaultSharedPreferences(context).getString(Util.PREFERENCE_KEY, null);
+        themeString= PreferenceManager.getDefaultSharedPreferences(context).getString(Util.PREFERENCE_KEY, null);
         if (themeString==null) {
             primaryColor=Default.primaryColor;
             accentColor=Default.accentColor;
