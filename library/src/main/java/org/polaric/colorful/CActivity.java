@@ -1,5 +1,6 @@
 package org.polaric.colorful;
 
+import android.app.ActivityManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -19,6 +20,9 @@ public abstract class CActivity extends AppCompatActivity {
             if (Colorful.getThemeDelegate().isTranslucent()) {
                 getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             }
+
+            ActivityManager.TaskDescription tDesc = new ActivityManager.TaskDescription(null, null, getResources().getColor(Colorful.getThemeDelegate().getPrimaryColor().getColorRes()));
+            setTaskDescription(tDesc);
         }
     }
 
