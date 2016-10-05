@@ -46,28 +46,31 @@ Any `Activity` you wish to be themed must extend from `CActivity`
 public class MainActivity extends CActivity
 ```
 
-You can set the default theme colors Colorful will use with the `Default` class
+You can set the default theme colors Colorful will use with the `defaults()` method
 ```java
 public class SampleApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Colorful.Default.primaryColor(Colorful.ThemeColor.RED);
-        Colorful.Default.accentColor(Colorful.ThemeColor.BLUE);
-        Colorful.Default.translucent(true);
-        Colorful.Default.dark(true);
+        Colorful.defaults()
+                .primaryColor(Colorful.ThemeColor.RED)
+                .accentColor(Colorful.ThemeColor.BLUE)
+                .translucent(false)
+                .dark(true);
         Colorful.init(this);
     }
 }
 ```
-You can set the colors at any time using the `Config` class
+You can set the colors at any time using the `config` method
 ```java
-Colorful.Config.primaryColor(Colorful.ThemeColor.DEEP_ORANGE);
-Colorful.Config.accentColor(Colorful.ThemeColor.CYAN);
-Colorful.Config.translucent(true);
-Colorful.Config.dark(false);
+Colorful.config(this)
+                .primaryColor(Colorful.ThemeColor.RED)
+                .accentColor(Colorful.ThemeColor.BLUE)
+                .translucent(false)
+                .dark(true)
+                .apply();
 ```
-After which you must call `Colorful.Config.apply(Context);` to save your changes
+After which you must call `apply();` to save your changes
 
 Colorful will handle saving and loading your theme preferences for you.
 
@@ -95,6 +98,22 @@ public class MainActivity extends CActivity {
 }
 ```
 
+## Preference Item
+Colorful has a inbuilt preference item that will automatically set Colorful's colors.
+
+Use `colorpicker:primary_color` and `colorpicker:accent_color` to tell Colorful which value to set.
+```xml
+        <org.polaric.colorful.ColorPickerPreference
+            android:title="@string/primary_color"
+            android:summary="@string/primary_color_desc"
+            colorpicker:primary_color="true"/>
+
+        <org.polaric.colorful.ColorPickerPreference
+            android:title="@string/accent_color"
+            android:summary="@string/accent_color_desc"
+            colorpicker:accent_color="true"/>
+```
+           
 
 ## Screenshots
 ![Image](screenshots/art1.png)![Image](screenshots/art2.png)
