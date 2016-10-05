@@ -31,8 +31,10 @@
             android:maxLines="4" />
     </RelativeLayout>
 
-    <org.polaric.colorful.CircularView android:id="@+id/color_indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+    <org.polaric.colorful.CircularView
+        android:id="@+id/color_indicator"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:gravity="center_vertical"/>
+
 </LinearLayout>

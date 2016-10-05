@@ -14,7 +14,7 @@ public class ColorPickerPreference extends Preference implements ColorPickerDial
         super(context, attrs);
         setWidgetLayoutResource(R.layout.preference_colorpicker);
 
-        TypedArray ta = context.obtainStyledAttributes(R.styleable.colorpicker);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.colorpicker);
         try {
             primary = ta.getBoolean(R.styleable.colorpicker_primary_color,false);
             accent = ta.getBoolean(R.styleable.colorpicker_accent_color, false);
@@ -26,6 +26,7 @@ public class ColorPickerPreference extends Preference implements ColorPickerDial
     @Override
     public void onColorSelected(Colorful.ThemeColor color) {
         if (primary) {
+            System.out.println(primary + " " + accent);
             Colorful.Config.primaryColor(color);
             Colorful.Config.apply(getContext());
         } else if (accent) {
@@ -48,6 +49,8 @@ public class ColorPickerPreference extends Preference implements ColorPickerDial
     @Override
     protected void onClick() {
         super.onClick();
-        new ColorPickerDialog(getContext()).show();
+        ColorPickerDialog dialog = new ColorPickerDialog(getContext());
+        dialog.setOnColorSelectedListener(this);
+        dialog.show();
     }
 }
