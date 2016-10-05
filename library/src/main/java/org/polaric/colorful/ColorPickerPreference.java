@@ -25,12 +25,15 @@ public class ColorPickerPreference extends Preference implements ColorPickerDial
     @Override
     public void onColorSelected(Colorful.ThemeColor color) {
         if (primary) {
-            Colorful.Config.primaryColor(color);
-            Colorful.Config.apply(getContext());
+            Colorful.config(getContext())
+                    .primaryColor(color)
+                    .apply();
         } else if (accent) {
-            Colorful.Config.accentColor(color);
-            Colorful.Config.apply(getContext());
+            Colorful.config(getContext())
+                    .accentColor(color)
+                    .apply();
         }
+        getOnPreferenceChangeListener().onPreferenceChange(this, null);
     }
 
     @Override

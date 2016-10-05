@@ -1,6 +1,7 @@
 package org.polaric.colorful.sample;
 
 import android.app.Application;
+import android.graphics.Color;
 
 import org.polaric.colorful.Colorful;
 
@@ -8,8 +9,12 @@ public class SampleApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Colorful.Default.primaryColor(Colorful.ThemeColor.RED);
-        Colorful.Default.accentColor(Colorful.ThemeColor.BLUE);
+        Colorful.defaults()
+                .primaryColor(Colorful.ThemeColor.RED)
+                .accentColor(Colorful.ThemeColor.BLUE)
+                .translucent(false)
+                .dark(true);
+
         Colorful.init(this);
     }
 }

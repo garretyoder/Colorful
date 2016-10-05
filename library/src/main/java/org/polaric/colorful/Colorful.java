@@ -17,10 +17,10 @@ public class Colorful {
         Log.d(Util.LOG_TAG,"Attatching to " + context.getPackageName());
         themeString= PreferenceManager.getDefaultSharedPreferences(context).getString(Util.PREFERENCE_KEY, null);
         if (themeString==null) {
-            primaryColor=Default.primaryColor;
-            accentColor=Default.accentColor;
-            isTranslucent=Default.trans;
-            isDark=Default.darkTheme;
+            primaryColor=Defaults.primaryColor;
+            accentColor=Defaults.accentColor;
+            isTranslucent=Defaults.trans;
+            isDark=Defaults.darkTheme;
             themeString=generateThemeString();
         }
         initValues();
@@ -89,49 +89,70 @@ public class Colorful {
         }
     }
 
-    public static class Default {
+    public static Config config(Context context) {
+        return new Config(context);
+    }
+
+    public static Defaults defaults() {
+        return new Defaults();
+    }
+
+    public static class Defaults {
 
         private static ThemeColor primaryColor= ThemeColor.DEEP_PURPLE;
         private static ThemeColor accentColor= ThemeColor.RED;
         private static boolean trans=false;
         private static boolean darkTheme=false;
 
-        public static void primaryColor(ThemeColor primary) {
+        public Defaults primaryColor(ThemeColor primary) {
             primaryColor = primary;
+            return this;
         }
 
-        public static void accentColor(ThemeColor accent) {
+        public Defaults accentColor(ThemeColor accent) {
             accentColor = accent;
+            return this;
         }
 
-        public static void translucent(boolean translucent) {
+        public Defaults translucent(boolean translucent) {
             trans = translucent;
+            return this;
         }
 
-        public static void dark(boolean dark) {
+        public Defaults dark(boolean dark) {
             darkTheme = dark;
+            return this;
         }
     }
 
     public static class Config {
+        private Context context;
 
-        public static void primaryColor(ThemeColor primary) {
+        private Config(Context context) {
+            this.context=context;
+        }
+
+        public Config primaryColor(ThemeColor primary) {
             primaryColor = primary;
+            return this;
         }
 
-        public static void accentColor(ThemeColor accent) {
+        public Config accentColor(ThemeColor accent) {
             accentColor = accent;
+            return this;
         }
 
-        public static void translucent(boolean translucent) {
+        public Config translucent(boolean translucent) {
             isTranslucent = translucent;
+            return this;
         }
 
-        public static void dark(boolean dark) {
+        public Config dark(boolean dark) {
             isDark = dark;
+            return this;
         }
 
-        public static void apply(Context context) {
+        public void apply() {
             writeValues(context);
             themeString=generateThemeString();
             delegate = new ThemeDelegate(context, primaryColor, accentColor, isTranslucent, isDark);
