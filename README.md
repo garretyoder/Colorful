@@ -73,7 +73,7 @@ Colorful will handle saving and loading your theme preferences for you.
 
 ## Color Chooser
 
-Colorful has a inbuilt color chooser dialog that will return a `ThemeColor` object you can pass directly to Cluttr
+Colorful has a inbuilt color chooser dialog that will return a `ThemeColor` object you can pass directly to Colorful
 ```java
 public class MainActivity extends CActivity {
 
