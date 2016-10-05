@@ -50,6 +50,10 @@ public class Colorful {
         return delegate;
     }
 
+    public static String getThemeString() {
+        return themeString;
+    }
+
     public enum ThemeColor {
         RED(R.color.md_red_500, R.color.md_red_700),
         PINK(R.color.md_pink_500, R.color.md_pink_700),
