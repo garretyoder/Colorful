@@ -1,4 +1,6 @@
 # Colorful
+[![Release](https://jitpack.io/v/garretyoder/Colorful.svg)](https://jitpack.io/#garretyoder/Colorful)
+
 
 Colorful is a dynamic theme library allowing you to change your apps' color schemes easily.
 
@@ -11,7 +13,21 @@ Copyright 2016 Garret Yoder
 
 
 ## Installation
-
+Add jitpack to your maven sources
+```
+allprojects {
+        repositories {
+            ...
+            maven { url "https://jitpack.io" }
+        }
+    }
+```
+Add Colorful as a dependency to your `build.gradle`
+```
+dependencies {
+            compile 'com.github.garretyoder:Colorful:0.1'
+    }
+```
 
 ## Usage
 
