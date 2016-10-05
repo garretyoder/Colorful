@@ -41,4 +41,8 @@ public class ThemeDelegate {
     public boolean isTranslucent() {
         return translucent;
     }
+    
+    public boolean isDark() {
+        return dark;
+    }
 }
