@@ -2,6 +2,7 @@ package org.polaric.colorful;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.preference.Preference;
+import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -9,8 +10,8 @@ public class ColorPickerPreference extends Preference implements ColorPickerDial
     private boolean primary;
     private boolean accent;
 
-    public ColorPickerPreference(Context context) {
-        super(context);
+    public ColorPickerPreference(Context context, AttributeSet attrs) {
+        super(context, attrs);
         setWidgetLayoutResource(R.layout.preference_colorpicker);
 
         TypedArray ta = context.obtainStyledAttributes(R.styleable.colorpicker);
