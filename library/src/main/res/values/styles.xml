@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- BASE THEMES -->
-    <style name="Colorful.Light" parent="Theme.AppCompat.Light.NoActionBar"/>
-    <style name="Colorful.Dark" parent="Theme.AppCompat.NoActionBar"/>
+    <style name="Colorful.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+    <style name="Colorful.Dark" parent="Theme.AppCompat.NoActionBar">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    <style>
 
     <!--red-->
     <style name="LIGHT0T0" parent="Colorful.Light">
