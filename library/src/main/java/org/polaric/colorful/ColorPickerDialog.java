@@ -26,6 +26,9 @@ public class ColorPickerDialog extends Dialog implements View.OnClickListener, C
     public void onItemClick(Colorful.ThemeColor color) {
         dismiss();
         if (listener!=null) {
+            if (getActivity!=null) {
+                getActivity.recreate();
+            }
             listener.onColorSelected(color);
         }
     }
