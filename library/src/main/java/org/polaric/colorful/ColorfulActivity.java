@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.WindowManager;
 
-public abstract class CActivity extends AppCompatActivity {
+public abstract class ColorfulActivity extends AppCompatActivity {
     private String themeString;
 
     @Override
