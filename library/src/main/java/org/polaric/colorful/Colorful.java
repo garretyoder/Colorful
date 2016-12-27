@@ -13,6 +13,10 @@ public class Colorful {
     private static boolean isDark = Defaults.darkTheme;
     private static String themeString;
 
+    private Colorful() {
+        // prevent initialization
+    }
+
     public static void init(Context context) {
         Log.d(Util.LOG_TAG,"Attatching to " + context.getPackageName());
         themeString= PreferenceManager.getDefaultSharedPreferences(context).getString(Util.PREFERENCE_KEY, null);
