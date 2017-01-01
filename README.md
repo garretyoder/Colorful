@@ -14,24 +14,24 @@ Copyright 2016 Garret Yoder
 
 ## Installation
 Add jitpack to your maven sources
-```
+```groovy
 allprojects {
-        repositories {
-            ...
-            maven { url "https://jitpack.io" }
-        }
+    repositories {
+        ...
+        maven { url "https://jitpack.io" }
     }
+}
 ```
 Add Colorful as a dependency to your `build.gradle`
-```
+```groovy
 dependencies {
-            compile 'com.github.garretyoder:Colorful:1.1
-    }
+    compile 'com.github.garretyoder:Colorful:1.1'
+}
 ```
 
 ## Usage
 
-In your `Application class`, you must initialize Colorful
+In your `Application` class, you must initialize Colorful
 ```java
 public class SampleApp extends Application {
     @Override
