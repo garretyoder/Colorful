@@ -7,23 +7,28 @@ import android.util.Log;
 
 public class Colorful {
     private static ThemeDelegate delegate;
-    private static ThemeColor primaryColor= ThemeColor.DEEP_PURPLE;
-    private static ThemeColor accentColor= ThemeColor.RED;
-    private static boolean isTranslucent=false;
-    private static boolean isDark=false;
+    private static ThemeColor primaryColor = Defaults.primaryColor;
+    private static ThemeColor accentColor = Defaults.accentColor;
+    private static boolean isTranslucent = Defaults.trans;
+    private static boolean isDark = Defaults.darkTheme;
     private static String themeString;
+
+    private Colorful() {
+        // prevent initialization
+    }
 
     public static void init(Context context) {
         Log.d(Util.LOG_TAG,"Attatching to " + context.getPackageName());
         themeString= PreferenceManager.getDefaultSharedPreferences(context).getString(Util.PREFERENCE_KEY, null);
-        if (themeString==null) {
-            primaryColor=Defaults.primaryColor;
-            accentColor=Defaults.accentColor;
-            isTranslucent=Defaults.trans;
-            isDark=Defaults.darkTheme;
-            themeString=generateThemeString();
+        if (themeString == null) {
+            primaryColor = Defaults.primaryColor;
+            accentColor = Defaults.accentColor;
+            isTranslucent = Defaults.trans;
+            isDark = Defaults.darkTheme;
+            themeString = generateThemeString();
+        } else {
+            initValues();
         }
-        initValues();
         delegate = new ThemeDelegate(context, primaryColor, accentColor, isTranslucent, isDark);
     }
 
