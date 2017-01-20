@@ -9,7 +9,9 @@ public class ThemeDelegate {
     private Colorful.ThemeColor accentColor;
     private boolean translucent;
     private boolean dark;
-    private int styleRes;
+    @StyleRes private int styleResPrimary;
+    @StyleRes private int styleResAccent;
+    @StyleRes private int styleResBase;
 
     ThemeDelegate(Context context, Colorful.ThemeColor primary, Colorful.ThemeColor accent, boolean translucent, boolean dark) {
         this.primaryColor=primary;
@@ -17,17 +19,22 @@ public class ThemeDelegate {
         this.translucent=translucent;
         this.dark=dark;
         long curTime = System.currentTimeMillis();
-        styleRes = context.getResources().getIdentifier(
-                (dark ? "DARK" : "LIGHT") +
-                primaryColor.ordinal() +
-                "T" +
-                accentColor.ordinal(),
-                "style", context.getPackageName());
+        styleResPrimary = context.getResources().getIdentifier("primary" + primary.ordinal(), "style", context.getPackageName());
+        styleResAccent = context.getResources().getIdentifier("accent" + accent.ordinal(), "style", context.getPackageName());
+        styleResBase = dark ? R.style.Colorful_Dark : R.style.Colorful_Light;
         Log.d(Util.LOG_TAG, "ThemeDelegate fetched theme in " + (System.currentTimeMillis()-curTime) + " milliseconds");
     }
 
-    public @StyleRes int getStyle() {
-        return styleRes;
+    @StyleRes public int getStyleResPrimary() {
+        return styleResPrimary;
+    }
+
+    @StyleRes public int getStyleResAccent() {
+        return styleResAccent;
+    }
+
+    @StyleRes public int getStyleResBase() {
+        return styleResBase;
     }
 
     public Colorful.ThemeColor getPrimaryColor() {

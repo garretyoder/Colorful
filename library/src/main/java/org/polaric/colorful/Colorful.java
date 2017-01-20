@@ -1,7 +1,9 @@
 package org.polaric.colorful;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.ColorRes;
+import android.support.annotation.NonNull;
 import android.support.v7.preference.PreferenceManager;
 import android.util.Log;
 
@@ -30,6 +32,18 @@ public class Colorful {
             initValues();
         }
         delegate = new ThemeDelegate(context, primaryColor, accentColor, isTranslucent, isDark);
+    }
+
+    public static void applyTheme(@NonNull Activity activity) {
+        applyTheme(activity, true);
+    }
+
+    public static void applyTheme(@NonNull Activity activity, boolean overrideBase) {
+        if (overrideBase) {
+            activity.setTheme(getThemeDelegate().getStyleResBase());
+        }
+        activity.getTheme().applyStyle(getThemeDelegate().getStyleResPrimary(), true);
+        activity.getTheme().applyStyle(getThemeDelegate().getStyleResAccent(), true);
     }
 
     private static void writeValues(Context context) {
@@ -75,7 +89,12 @@ public class Colorful {
         YELLOW(R.color.md_yellow_500, R.color.md_yellow_700),
         AMBER(R.color.md_amber_500, R.color.md_amber_700),
         ORANGE(R.color.md_orange_500, R.color.md_orange_700),
-        DEEP_ORANGE(R.color.md_deep_orange_500, R.color.md_deep_orange_700);
+        DEEP_ORANGE(R.color.md_deep_orange_500, R.color.md_deep_orange_700),
+        BROWN(R.color.md_brown_500, R.color.md_brown_700),
+        GREY(R.color.md_grey_500, R.color.md_grey_700),
+        BLUE_GREY(R.color.md_blue_grey_500, R.color.md_blue_grey_700),
+        WHITE(R.color.md_white_1000, R.color.md_white_1000),
+        BLACK(R.color.md_black_1000, R.color.md_black_1000);
 
         @ColorRes private int colorRes;
         @ColorRes private int darkColorRes;
