@@ -2,6 +2,7 @@ package org.polaric.colorful;
 
 import android.content.Context;
 import android.support.annotation.StyleRes;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 public class ThemeDelegate {
@@ -14,15 +15,15 @@ public class ThemeDelegate {
     @StyleRes private int styleResBase;
 
     ThemeDelegate(Context context, Colorful.ThemeColor primary, Colorful.ThemeColor accent, boolean translucent, boolean dark) {
-        this.primaryColor=primary;
-        this.accentColor=accent;
-        this.translucent=translucent;
-        this.dark=dark;
+        this.primaryColor = primary;
+        this.accentColor = accent;
+        this.translucent = translucent;
+        this.dark = dark;
         long curTime = System.currentTimeMillis();
         styleResPrimary = context.getResources().getIdentifier("primary" + primary.ordinal(), "style", context.getPackageName());
         styleResAccent = context.getResources().getIdentifier("accent" + accent.ordinal(), "style", context.getPackageName());
         styleResBase = dark ? R.style.Colorful_Dark : R.style.Colorful_Light;
-        Log.d(Util.LOG_TAG, "ThemeDelegate fetched theme in " + (System.currentTimeMillis()-curTime) + " milliseconds");
+        Log.d(Util.LOG_TAG, "ThemeDelegate fetched theme in " + (System.currentTimeMillis() - curTime) + " milliseconds");
     }
 
     @StyleRes public int getStyleResPrimary() {

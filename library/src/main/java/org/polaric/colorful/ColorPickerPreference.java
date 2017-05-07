@@ -1,6 +1,7 @@
 package org.polaric.colorful;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
@@ -33,7 +34,7 @@ public class ColorPickerPreference extends Preference implements ColorPickerDial
                     .accentColor(color)
                     .apply();
         }
-        if (getOnPreferenceChangeListener()!=null) {
+        if (getOnPreferenceChangeListener() != null) {
             getOnPreferenceChangeListener().onPreferenceChange(this, color);
         }
     }
@@ -42,9 +43,9 @@ public class ColorPickerPreference extends Preference implements ColorPickerDial
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
         if (primary) {
-            ((CircularView) holder.findViewById(R.id.color_indicator)).setColor(getContext().getResources().getColor(Colorful.getThemeDelegate().getPrimaryColor().getColorRes()));
+            ((CircularView) holder.findViewById(R.id.color_indicator)).setColor(ContextCompat.getColor(getContext(), Colorful.getThemeDelegate().getPrimaryColor().getColorRes()));
         } else if (accent) {
-            ((CircularView) holder.findViewById(R.id.color_indicator)).setColor(getContext().getResources().getColor(Colorful.getThemeDelegate().getAccentColor().getColorRes()));
+            ((CircularView) holder.findViewById(R.id.color_indicator)).setColor(ContextCompat.getColor(getContext(), Colorful.getThemeDelegate().getAccentColor().getColorRes()));
         }
     }
 
