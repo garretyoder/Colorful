@@ -94,7 +94,9 @@ public class Colorful {
         GREY(R.color.md_grey_500, R.color.md_grey_700),
         BLUE_GREY(R.color.md_blue_grey_500, R.color.md_blue_grey_700),
         WHITE(R.color.md_white_1000, R.color.md_white_1000),
-        BLACK(R.color.md_black_1000, R.color.md_black_1000);
+        BLACK(R.color.md_black_1000, R.color.md_black_1000),
+        LIGHT_GREY(R.color.md_grey_100, R.color.md_grey_300),
+        DARK_GREY(R.color.md_grey_900, R.color.md_black_1000);
 
         @ColorRes private int colorRes;
         @ColorRes private int darkColorRes;
