@@ -2,7 +2,6 @@ package org.polaric.colorful;
 
 import android.content.Context;
 import android.support.annotation.StyleRes;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 public class ThemeDelegate {
