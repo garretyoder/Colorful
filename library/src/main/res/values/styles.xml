@@ -197,4 +197,21 @@
         <item name="colorAccent">@color/md_black_1000</item>
     </style>
 
+    <style name="primary21">
+        <item name="colorPrimary">@color/md_grey_100</item>
+        <item name="colorPrimaryDark">@color/md_grey_300</item>
+    </style>
+
+    <style name="accent21">
+        <item name="colorAccent">@color/md_grey_100</item>
+    </style>
+
+    <style name="primary22">
+        <item name="colorPrimary">@color/md_grey_900</item>
+        <item name="colorPrimaryDark">@color/md_black_1000</item>
+    </style>
+
+    <style name="accent22">
+        <item name="colorAccent">@color/md_grey_900</item>
+    </style>
 </resources>
