@@ -60,4 +60,11 @@
         android:onClick="onPickTheme"
         android:text="Change Theme"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:onClick="onPreference"
+        android:text="Perference Sample"/>
+
 </LinearLayout>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Colorful</string>
+    <string name="primary_color">Primary Color</string>
+    <string name="primary_color_desc">app\'s primary color</string>
+    <string name="accent_color">Accent Color</string>
+    <string name="accent_color_desc">app\'s accent color</string>
 </resources>

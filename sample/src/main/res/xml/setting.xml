@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:colorpicker="http://schemas.android.com/apk/res-auto">
+    <SwitchPreference
+        android:defaultValue="true"
+        android:title="Indicting accent color"/>
+
+    <org.polaric.colorful.ColorPickerPreference
+        android:key="primary_color"
+        android:summary="@string/primary_color_desc"
+        android:title="@string/primary_color"
+        colorpicker:primary_color="true"/>
+
+    <org.polaric.colorful.ColorPickerPreference
+        android:key="accent_color"
+        android:summary="@string/accent_color_desc"
+        android:title="@string/accent_color"
+        colorpicker:accent_color="true"/>
+</PreferenceScreen>

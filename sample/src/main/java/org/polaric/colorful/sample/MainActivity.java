@@ -47,6 +47,10 @@ public class MainActivity extends ColorfulActivity {
         dialog.show();
     }
 
+    public void onPreference(final View view) {
+        startActivity(new Intent(this, SettingActivity.class));
+    }
+
     private SecureRandom mRandom = new SecureRandom();
 
     private ThemeColor pickRandomThemeColor() {
