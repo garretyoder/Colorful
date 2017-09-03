@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- BASE THEMES -->
+    <style name="Colorful.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+    <style name="Colorful.Dark" parent="Theme.AppCompat.NoActionBar">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+
+    <style name="primary0">
+        <item name="colorPrimary">@color/md_red_500</item>
+        <item name="colorPrimaryDark">@color/md_red_700</item>
+    </style>
+
+    <style name="accent0">
+        <item name="colorAccent">@color/md_red_500</item>
+    </style>
+
+    <style name="primary1">
+        <item name="colorPrimary">@color/md_pink_500</item>
+        <item name="colorPrimaryDark">@color/md_pink_700</item>
+    </style>
+
+    <style name="accent1">
+        <item name="colorAccent">@color/md_pink_500</item>
+    </style>
+
+    <style name="primary2">
+        <item name="colorPrimary">@color/md_purple_500</item>
+        <item name="colorPrimaryDark">@color/md_purple_700</item>
+    </style>
+
+    <style name="accent2">
+        <item name="colorAccent">@color/md_purple_500</item>
+    </style>
+
+    <style name="primary3">
+        <item name="colorPrimary">@color/md_deep_purple_500</item>
+        <item name="colorPrimaryDark">@color/md_deep_purple_700</item>
+    </style>
+
+    <style name="accent3">
+        <item name="colorAccent">@color/md_deep_purple_500</item>
+    </style>
+
+    <style name="primary4">
+        <item name="colorPrimary">@color/md_indigo_500</item>
+        <item name="colorPrimaryDark">@color/md_indigo_700</item>
+    </style>
+
+    <style name="accent4">
+        <item name="colorAccent">@color/md_indigo_500</item>
+    </style>
+
+    <style name="primary5">
+        <item name="colorPrimary">@color/md_blue_500</item>
+        <item name="colorPrimaryDark">@color/md_blue_700</item>
+    </style>
+
+    <style name="accent5">
+        <item name="colorAccent">@color/md_blue_500</item>
+    </style>
+
+    <style name="primary6">
+        <item name="colorPrimary">@color/md_light_blue_500</item>
+        <item name="colorPrimaryDark">@color/md_light_blue_700</item>
+    </style>
+
+    <style name="accent6">
+        <item name="colorAccent">@color/md_light_blue_500</item>
+    </style>
+
+    <style name="primary7">
+        <item name="colorPrimary">@color/md_cyan_500</item>
+        <item name="colorPrimaryDark">@color/md_cyan_700</item>
+    </style>
+
+    <style name="accent7">
+        <item name="colorAccent">@color/md_cyan_500</item>
+    </style>
+
+    <style name="primary8">
+        <item name="colorPrimary">@color/md_teal_500</item>
+        <item name="colorPrimaryDark">@color/md_teal_700</item>
+    </style>
+
+    <style name="accent8">
+        <item name="colorAccent">@color/md_teal_500</item>
+    </style>
+
+    <style name="primary9">
+        <item name="colorPrimary">@color/md_green_500</item>
+        <item name="colorPrimaryDark">@color/md_green_700</item>
+    </style>
+
+    <style name="accent9">
+        <item name="colorAccent">@color/md_green_500</item>
+    </style>
+
+    <style name="primary10">
+        <item name="colorPrimary">@color/md_light_green_500</item>
+        <item name="colorPrimaryDark">@color/md_light_green_700</item>
+    </style>
+
+    <style name="accent10">
+        <item name="colorAccent">@color/md_light_green_500</item>
+    </style>
+
+    <style name="primary11">
+        <item name="colorPrimary">@color/md_lime_500</item>
+        <item name="colorPrimaryDark">@color/md_lime_700</item>
+    </style>
+
+    <style name="accent11">
+        <item name="colorAccent">@color/md_lime_500</item>
+    </style>
+
+    <style name="primary12">
+        <item name="colorPrimary">@color/md_yellow_500</item>
+        <item name="colorPrimaryDark">@color/md_yellow_700</item>
+    </style>
+
+    <style name="accent12">
+        <item name="colorAccent">@color/md_yellow_500</item>
+    </style>
+
+    <style name="primary13">
+        <item name="colorPrimary">@color/md_amber_500</item>
+        <item name="colorPrimaryDark">@color/md_amber_700</item>
+    </style>
+
+    <style name="accent13">
+        <item name="colorAccent">@color/md_amber_500</item>
+    </style>
+
+    <style name="primary14">
+        <item name="colorPrimary">@color/md_orange_500</item>
+        <item name="colorPrimaryDark">@color/md_orange_700</item>
+    </style>
+
+    <style name="accent14">
+        <item name="colorAccent">@color/md_orange_500</item>
+    </style>
+
+    <style name="primary15">
+        <item name="colorPrimary">@color/md_deep_orange_500</item>
+        <item name="colorPrimaryDark">@color/md_deep_orange_700</item>
+    </style>
+
+    <style name="accent15">
+        <item name="colorAccent">@color/md_deep_orange_500</item>
+    </style>
+
+    <style name="primary16">
+        <item name="colorPrimary">@color/md_brown_500</item>
+        <item name="colorPrimaryDark">@color/md_brown_700</item>
+    </style>
+
+    <style name="accent16">
+        <item name="colorAccent">@color/md_brown_500</item>
+    </style>
+
+    <style name="primary17">
+        <item name="colorPrimary">@color/md_grey_500</item>
+        <item name="colorPrimaryDark">@color/md_grey_700</item>
+    </style>
+
+    <style name="accent17">
+        <item name="colorAccent">@color/md_grey_500</item>
+    </style>
+
+    <style name="primary18">
+        <item name="colorPrimary">@color/md_blue_grey_500</item>
+        <item name="colorPrimaryDark">@color/md_blue_grey_700</item>
+    </style>
+
+    <style name="accent18">
+        <item name="colorAccent">@color/md_blue_grey_500</item>
+    </style>
+
+    <style name="primary19">
+        <item name="colorPrimary">@color/md_white_1000</item>
+        <item name="colorPrimaryDark">@color/md_white_1000</item>
+    </style>
+
+    <style name="accent19">
+        <item name="colorAccent">@color/md_white_1000</item>
+    </style>
+
+    <style name="primary20">
+        <item name="colorPrimary">@color/md_black_1000</item>
+        <item name="colorPrimaryDark">@color/md_black_1000</item>
+    </style>
+
+    <style name="accent20">
+        <item name="colorAccent">@color/md_black_1000</item>
+    </style>
+
+</resources>
