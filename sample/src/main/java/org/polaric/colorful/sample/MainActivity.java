@@ -3,6 +3,7 @@ package org.polaric.colorful.sample;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import org.polaric.colorful.Colorful;
 import org.polaric.colorful.ColorfulActivity;
 
 public class MainActivity extends ColorfulActivity {

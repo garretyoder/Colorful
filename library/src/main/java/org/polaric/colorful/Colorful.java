@@ -147,6 +147,20 @@ public class Colorful {
             darkTheme = dark;
             return this;
         }
+
+        //////////////////////////////////////////////////////
+
+        public static ThemeColor getPrimaryColor() {
+            return primaryColor;
+        }
+
+        public static ThemeColor getAccentColor() {
+            return accentColor;
+        }
+
+        public static boolean isDarkTheme() {
+            return isDark;
+        }
     }
 
     public static class Config {
