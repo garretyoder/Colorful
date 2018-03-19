@@ -3,7 +3,7 @@ package io.multimoon.colorful
 import android.content.Context
 import android.support.annotation.StyleRes
 
-class ThemeEditor(internal var primaryColor:ThemeColor=ThemeColor.INDIGO,internal  var accentColor:ThemeColor=ThemeColor.RED,internal var darkTheme:Boolean=true, internal @StyleRes var customTheme:Int=0) {
+class ThemeEditor(internal var primaryColor:ThemeColor=ThemeColor.INDIGO,internal  var accentColor:ThemeColor=ThemeColor.RED,internal var darkTheme:Boolean=true, internal var translucent:Boolean, internal @StyleRes var customTheme:Int=0) {
 
     fun setPrimaryColor(primaryColor:ThemeColor):ThemeEditor {
         this.primaryColor=primaryColor
@@ -24,7 +24,11 @@ class ThemeEditor(internal var primaryColor:ThemeColor=ThemeColor.INDIGO,interna
         this.customTheme=customTheme
     }
 
+    fun setTranslucent(translucent: Boolean) {
+        this.translucent=translucent
+    }
+
     fun apply(context: Context) {
-        applyEdits(context, primaryColor, accentColor, darkTheme)
+        applyEdits(context, primaryColor, accentColor, darkTheme,translucent, customTheme)
     }
 }

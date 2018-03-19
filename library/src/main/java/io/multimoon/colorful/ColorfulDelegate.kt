@@ -5,7 +5,7 @@ import android.content.Context
 import android.support.annotation.StyleRes
 import android.util.Log
 
-class ColorfulDelegate(var primaryColor:ThemeColor, var accentColor:ThemeColor, var darkTheme:Boolean,  @StyleRes val customTheme:Int=0) {
+class ColorfulDelegate(internal var primaryColor:ThemeColor,internal var accentColor:ThemeColor,internal var darkTheme:Boolean,internal var translucent:Boolean,internal @StyleRes val customTheme:Int=0) {
 
     fun apply(activity:Activity, override:Boolean = true, appcompat:Boolean = false) {
         if (appcompat) {
@@ -22,8 +22,18 @@ class ColorfulDelegate(var primaryColor:ThemeColor, var accentColor:ThemeColor, 
         }
     }
 
+    fun getPrimaryColor():ThemeColor=primaryColor
+
+    fun getAccentColor():ThemeColor=accentColor
+
+    fun getDarkTheme():Boolean=darkTheme
+
+    fun getTranslucent():Boolean=translucent
+
+    fun getCustomTheme():Int=customTheme
+
     fun edit():ThemeEditor {
-        return ThemeEditor(primaryColor, accentColor, darkTheme, customTheme)
+        return ThemeEditor(primaryColor, accentColor, darkTheme, translucent, customTheme)
     }
 
     fun clear(context: Context) {
@@ -31,7 +41,7 @@ class ColorfulDelegate(var primaryColor:ThemeColor, var accentColor:ThemeColor, 
     }
 
     internal fun getThemeString():String {
-        return primaryColor.name+":"+accentColor.name+":"+darkTheme+":"+customTheme
+        return primaryColor.name+":"+accentColor.name+":"+darkTheme+":"+customTheme+":"+translucent
     }
 
 }

@@ -1,6 +1,7 @@
 package io.multimoon.colorfulsample
 
 import android.app.Application
+import io.multimoon.colorful.Colorful
 import io.multimoon.colorful.Defaults
 import io.multimoon.colorful.ThemeColor
 import io.multimoon.colorful.initColorful

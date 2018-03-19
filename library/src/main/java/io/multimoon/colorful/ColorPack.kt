@@ -1,6 +1,6 @@
 package io.multimoon.colorful
 
-class ColorPack (val colorLight:ColorfulColor, val colorDark:ColorfulColor) {
+class ColorPack (internal val colorLight:ColorfulColor,internal val colorDark:ColorfulColor) {
     fun light() = colorLight
     fun dark() = colorDark
 }
