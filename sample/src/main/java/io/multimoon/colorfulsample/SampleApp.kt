@@ -8,6 +8,11 @@ import io.multimoon.colorful.initColorful
 class SampleApp:Application() {
     override fun onCreate() {
         super.onCreate()
-        initColorful(this, Defaults(ThemeColor.GREEN, ThemeColor.BLUE, false, false))
+        val defaults:Defaults = Defaults(
+                primaryColor = ThemeColor.GREEN,
+                accentColor = ThemeColor.BLUE,
+                useDarkTheme = false,
+                translucent = false)
+        initColorful(this, defaults)
     }
 }
