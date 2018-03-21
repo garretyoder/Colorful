@@ -20,12 +20,14 @@ class ThemeEditor(internal var primaryColor:ThemeColor=ThemeColor.INDIGO,interna
         return this
     }
 
-    fun setCustomThemeOverride(@StyleRes customTheme:Int) {
+    fun setCustomThemeOverride(@StyleRes customTheme:Int):ThemeEditor {
         this.customTheme=customTheme
+        return this
     }
 
-    fun setTranslucent(translucent: Boolean) {
+    fun setTranslucent(translucent: Boolean):ThemeEditor {
         this.translucent=translucent
+        return this
     }
 
     fun apply(context: Context) {

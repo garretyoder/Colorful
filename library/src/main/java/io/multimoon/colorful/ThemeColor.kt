@@ -25,5 +25,6 @@ enum class ThemeColor(private val primaryRes:Int, private val accentRes:Int, pri
 
     @StyleRes fun primaryStyle() = primaryRes
     @StyleRes fun accentStyle() = accentRes
+    fun getColorPack() = color
 }
 

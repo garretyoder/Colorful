@@ -5,7 +5,7 @@ import android.content.Context
 import android.support.annotation.StyleRes
 import android.util.Log
 
-class ColorfulDelegate(internal var primaryColor:ThemeColor,internal var accentColor:ThemeColor,internal var darkTheme:Boolean,internal var translucent:Boolean,internal @StyleRes val customTheme:Int=0) {
+class ColorfulDelegate(private var primaryColor:ThemeColor,private var accentColor:ThemeColor,private var darkTheme:Boolean,private var translucent:Boolean,private @StyleRes val customTheme:Int=0) {
 
     fun apply(activity:Activity, override:Boolean = true, appcompat:Boolean = false) {
         if (appcompat) {
