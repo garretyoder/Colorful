@@ -74,7 +74,7 @@ You must call `apply(context:Context)` to save your changes
 
 Colorful will handle saving and loading your theme preferences for you
 
-##Custom styles
+## Custom styles
 
 Colorful has beta support for combining your own styles with it's own. This is not yet guaranteed to work reliably. 
 ```kotlin
