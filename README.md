@@ -3,7 +3,7 @@
 
 
 Colorful is a dynamic theme library allowing you to change your apps' color schemes easily.
-
+*Colorful v2 is here! v2 has been rewritten from the ground up in Kotlin to be lighter, faster, and more feature-packed*
 
 ## License
 
