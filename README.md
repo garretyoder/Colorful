@@ -11,7 +11,9 @@ Colorful is licensed under the Apache 2.0 License
 
 Copyright 2018 Garret Yoder
 
-![Image](screenshots/screen1.png)![Image](screenshots/screen2.png)![Image](screenshots/screen3.png)
+|                                    |                                    |                                    |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| ![Image](screenshots/screen1.png)  | ![Image](screenshots/screen2.png)  | ![Image](screenshots/screen3.png)  |
 
 ## Installation
 Add jitpack to your maven sources
