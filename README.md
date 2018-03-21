@@ -11,7 +11,7 @@ Colorful is licensed under the Apache 2.0 License
 
 Copyright 2018 Garret Yoder
 
-
+![Image](screenshots/screen1.png)![Image](screenshots/screen2.png)![Image](screenshots/screen3.png)
 
 ## Installation
 Add jitpack to your maven sources
@@ -55,8 +55,10 @@ class MainActivity : CAppCompatActivity()
 ```
 If you wish to use your own activity, you can manually apply Colorful's theme to any activity using `apply(activity:Activity)`
 ```kotlin
-Colorful().apply(this)
-Colorful().apply(this,appcompat = true)
+Colorful().apply(activity:Activity)
+```
+```kotlin
+Colorful().apply(activity:Activity,appcompat = true)
 ```
 You can set the colors at any time using the `edit()` method
 ```kotlin
@@ -65,7 +67,7 @@ You can set the colors at any time using the `edit()` method
                 .setAccentColor(ThemeColor.BLUE)
                 .setDarkTheme(true)
                 .setTranslucent(true)
-                .apply(this)
+                .apply(context:Context)
 ```
 You must call `apply(context:Context)` to save your changes
 
