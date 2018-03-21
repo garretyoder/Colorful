@@ -57,11 +57,10 @@ class MainActivity : CAppCompatActivity()
 ```
 If you wish to use your own activity, you can manually apply Colorful's theme to any activity using `apply(activity:Activity)`
 ```kotlin
-Colorful().apply(activity:Activity)
+Colorful().apply(this, override = true, appcompat = false)
 ```
-```kotlin
-Colorful().apply(activity:Activity,appcompat = true)
-```
+The `override` value will control whether Colorful overrides your activitie's existing base theme, or merely sets primary and accent colors. **Note**: dark/light themeing will not work when override is disabled
+The `appcompat` value will control which base theme Colorful will use, Appcompat or Material
 You can set the colors at any time using the `edit()` method
 ```kotlin
         Colorful().edit()
@@ -74,3 +73,17 @@ You can set the colors at any time using the `edit()` method
 You must call `apply(context:Context)` to save your changes
 
 Colorful will handle saving and loading your theme preferences for you
+
+##Custom styles
+
+Colorful has beta support for combining your own styles with it's own. This is not yet guaranteed to work reliably. 
+```kotlin
+Colorful().edit()
+                .setPrimaryColor(ThemeColor.RED)
+                .setAccentColor(ThemeColor.BLUE)
+                .setDarkTheme(true)
+                .setTranslucent(true)
+                .setCustomThemeOverride(R.style.AppTheme)
+                .apply(this)
+ ```
+ The `setCustomThemeOverride` method will allow Colorful to mix a provided theme with it's own. If you wish to set specific theme items yourself, such as coloring all text orange, you can do this within a style file and then have Colorful merge it with it's own theme.
