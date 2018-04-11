@@ -10,7 +10,7 @@ class ColorfulDelegate(private var primaryColor: ThemeColor, private var accentC
     fun apply(activity: Activity, override: Boolean = true, appcompat: Boolean = false) {
         if (appcompat) {
             if (override) activity.setTheme(if (darkTheme) R.style.Colorful_AppCompat_Dark else R.style.Colorful_AppCompat_Light)
-            Log.d("COLORFUL", "Using appcompat theme over native material per user preference")
+            Log.d("COLORFUL", "Using appcompat theme over native material per user preference (override = ${override})")
         } else {
             if (override) activity.setTheme(if (darkTheme) R.style.Colorful_Dark else R.style.Colorful_Light)
         }

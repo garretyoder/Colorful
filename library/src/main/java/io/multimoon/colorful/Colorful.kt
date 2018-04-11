@@ -40,6 +40,8 @@ internal fun applyEdits(context: Context, primaryColor: ThemeColor, accentColor:
             .apply()
     if (customTheme != 0)
         prefs.edit().putInt(customThemeKey, customTheme).apply()
+    else
+        prefs.edit().remove(customThemeKey).apply()
     mInstance = ColorfulDelegate(primaryColor, accentColor, darkTheme, translucent)
 }
 
