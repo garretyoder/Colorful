@@ -1,4 +1,5 @@
-![Image](screenshots/Colorful.png | width=100)
+<img src="screenshots/Colorful.png" width="200">
+
 # Colorful
 [![Release](https://jitpack.io/v/garretyoder/Colorful.svg)](https://jitpack.io/#garretyoder/Colorful) [![Build Status](https://travis-ci.org/garretyoder/Colorful.svg?branch=master)](https://travis-ci.org/garretyoder/Colorful)
 
