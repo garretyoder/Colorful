@@ -2,7 +2,7 @@ package io.multimoon.colorful
 
 import android.support.annotation.StyleRes
 
-enum class ThemeColor(private val primaryRes:Int, private val accentRes:Int, private val color:ColorPack) {
+enum class ThemeColor(private val primaryRes: Int, private val accentRes: Int, private val color: ColorPack) {
     RED(R.style.primary0, R.style.accent0, ColorPack(ColorfulColor("#f44336"), ColorfulColor("#d32f2f"))),
     PINK(R.style.primary1, R.style.accent1, ColorPack(ColorfulColor("#e91e63"), ColorfulColor("#c2185b"))),
     PURPLE(R.style.primary2, R.style.accent2, ColorPack(ColorfulColor("#9c27b0"), ColorfulColor("#7b1fa2"))),
@@ -23,8 +23,12 @@ enum class ThemeColor(private val primaryRes:Int, private val accentRes:Int, pri
     GREY(R.style.primary17, R.style.accent17, ColorPack(ColorfulColor("#9e9e9e"), ColorfulColor("#616161"))),
     BLUE_GREY(R.style.primary18, R.style.accent18, ColorPack(ColorfulColor("#607d8b"), ColorfulColor("#455a64")));
 
-    @StyleRes fun primaryStyle() = primaryRes
-    @StyleRes fun accentStyle() = accentRes
+    @StyleRes
+    fun primaryStyle() = primaryRes
+
+    @StyleRes
+    fun accentStyle() = accentRes
+
     fun getColorPack() = color
 }
 
