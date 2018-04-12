@@ -1,5 +1,5 @@
 # Colorful
-[![Release](https://jitpack.io/v/garretyoder/Colorful.svg)](https://jitpack.io/#garretyoder/Colorful)
+[![Release](https://jitpack.io/v/garretyoder/Colorful.svg)](https://jitpack.io/#garretyoder/Colorful) [![Build Status](https://travis-ci.org/garretyoder/Colorful.svg?branch=master)](https://travis-ci.org/garretyoder/Colorful)
 
 
 Colorful is a dynamic theme library allowing you to change your apps' color schemes easily.
