@@ -1,20 +1,20 @@
 language: android
+dist: trusty
+install: true
+jdk:
+- oraclejdk8
 android:
-  licenses:
-    - 'android-sdk-preview-license-.+'
-    - 'android-sdk-license-.+'
-    - 'google-gdk-license-.+'
   components:
-    - tools
-    - platform-tools
-    - tools
-
-    # The BuildTools 
-    - build-tools-27.0.3
-
-    # The SDK version
-    - android-27
-
-    # Additional components
-    - extra-google-m2repository
-    - extra-android-m2repository
+  - tools
+  - tools
+  - platform-tools
+  - build-tools-27.0.3
+  - android-27
+  - extra-google-m2repository
+  - extra-android-m2repository
+  licenses:
+  - android-sdk-preview-license-.+
+  - android-sdk-license-.+
+  - google-gdk-license-.+
+before_install:
+  - yes | sdkmanager "platforms;android-27"
