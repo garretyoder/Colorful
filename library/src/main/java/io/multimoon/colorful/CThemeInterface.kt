@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
 
-interface CBaseActivity {
+interface CThemeInterface {
     var themeString: String
 
     fun handleOnCreate(activity: Activity, savedInstanceState: Bundle?, appcompat: Boolean, override: Boolean = true) {

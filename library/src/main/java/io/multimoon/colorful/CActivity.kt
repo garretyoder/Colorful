@@ -3,7 +3,7 @@ package io.multimoon.colorful
 import android.app.Activity
 import android.os.Bundle
 
-open class CActivity : Activity(), CBaseActivity {
+open class CActivity : Activity(), CThemeInterface {
 
     override var themeString: String = ""
 

@@ -2,6 +2,7 @@ package io.multimoon.colorful
 
 import android.content.Context
 import android.support.annotation.StyleRes
+import android.util.Log
 
 class ThemeEditor(internal var primaryColor: ThemeColor = ThemeColor.INDIGO, internal var accentColor: ThemeColor = ThemeColor.RED, internal var darkTheme: Boolean = true, internal var translucent: Boolean, internal @StyleRes var customTheme: Int = 0) {
 
@@ -30,7 +31,8 @@ class ThemeEditor(internal var primaryColor: ThemeColor = ThemeColor.INDIGO, int
         return this
     }
 
-    fun apply(context: Context) {
+    fun apply(context: Context, callback: () -> Unit = { Log.d("Colorful", "Callback omitted") }) {
         applyEdits(context, primaryColor, accentColor, darkTheme, translucent, customTheme)
+        callback()
     }
 }
