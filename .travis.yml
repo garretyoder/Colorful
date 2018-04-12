@@ -1,7 +1,9 @@
 language: android
 android:
-  before_install:
-    - yes | sdkmanager "platforms;android-27"
+  licenses:
+    - 'android-sdk-preview-license-.+'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
   components:
     - tools
     - platform-tools
