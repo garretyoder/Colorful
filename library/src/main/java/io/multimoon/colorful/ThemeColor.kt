@@ -21,7 +21,9 @@ enum class ThemeColor(private val primaryRes: Int, private val accentRes: Int, p
     DEEP_ORANGE(R.style.primary15, R.style.accent15, ColorPack(ColorfulColor("#ff5722"), ColorfulColor("#e64a19"))),
     BROWN(R.style.primary16, R.style.accent16, ColorPack(ColorfulColor("#795548"), ColorfulColor("#5d4037"))),
     GREY(R.style.primary17, R.style.accent17, ColorPack(ColorfulColor("#9e9e9e"), ColorfulColor("#616161"))),
-    BLUE_GREY(R.style.primary18, R.style.accent18, ColorPack(ColorfulColor("#607d8b"), ColorfulColor("#455a64")));
+    BLUE_GREY(R.style.primary18, R.style.accent18, ColorPack(ColorfulColor("#607d8b"), ColorfulColor("#455a64"))),
+    WHITE(R.style.primary19, R.style.accent19, ColorPack(ColorfulColor("#ffffff"), ColorfulColor("#ffffff"))),
+    BLACK(R.style.primary20, R.style.accent20, ColorPack(ColorfulColor("#000000"), ColorfulColor("#000000")));
 
     @StyleRes
     fun primaryStyle() = primaryRes

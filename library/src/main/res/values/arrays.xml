@@ -21,6 +21,8 @@
         <item>Brown</item>
         <item>Grey</item>
         <item>Blue Grey</item>
+        <item>White</item>
+        <item>Black</item>
     </string-array>
 
     <!-- values for preferences, ordered like in ThemeColor -->
@@ -45,5 +47,6 @@
         <item>17</item>
         <item>18</item>
         <item>19</item>
+        <item>20</item>
     </string-array>
 </resources>
