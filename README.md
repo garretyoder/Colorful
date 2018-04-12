@@ -29,7 +29,7 @@ allprojects {
 Add Colorful as a dependency to your `build.gradle`
 ```groovy
 dependencies {
-    implementation 'com.github.garretyoder:Colorful:2.0'
+    implementation 'com.github.garretyoder:Colorful:2.1'
 }
 ```
 
