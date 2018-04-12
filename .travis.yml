@@ -1,0 +1,16 @@
+language: android
+android:
+  components:
+    - tools
+    - platform-tools
+    - tools
+
+    # The BuildTools 
+    - build-tools-27.0.3
+
+    # The SDK version
+    - android-27
+
+    # Additional components
+    - extra-google-m2repository
+    - extra-android-m2repository
