@@ -18,7 +18,7 @@ fun Colorful(): ColorfulDelegate {
 
 fun initColorful(app: Application, defaults: Defaults = Defaults(ThemeColor.INDIGO, ThemeColor.RED, true, true)) {
     val time: Long = System.currentTimeMillis()
-    val prefs = app.getSharedPreferences("io.multimoon.colorful.colorvals", Context.MODE_PRIVATE)
+    val prefs = app.getSharedPreferences(ThemeEditor.PREF_NAME, Context.MODE_PRIVATE)
 
     var primary: ThemeColorInterface = ThemeColorInterface.parse(prefs.getString(primaryThemeKey, defaults.primaryColor.themeName))
     var accent: ThemeColorInterface = ThemeColorInterface.parse(prefs.getString(accentThemeKey, defaults.accentColor.themeName))
@@ -31,23 +31,4 @@ fun initColorful(app: Application, defaults: Defaults = Defaults(ThemeColor.INDI
             prefs.getInt(customThemeKey, defaults.customTheme))
 
     Log.d("COLORFUL", "Colorful init in " + (System.currentTimeMillis() - time) + " milliseconds!")
-}
-
-internal fun applyEdits(context: Context, primaryColor: ThemeColorInterface, accentColor: ThemeColorInterface, darkTheme: Boolean, translucent: Boolean, customTheme: Int = 0) {
-    val prefs = context.getSharedPreferences("io.multimoon.colorful.colorvals", Context.MODE_PRIVATE)
-    prefs.edit()
-            .putBoolean(darkThemeKey, darkTheme)
-            .putString(primaryThemeKey, primaryColor.themeName)
-            .putString(accentThemeKey, accentColor.themeName)
-            .putBoolean(translucentKey, translucent)
-            .apply()
-    if (customTheme != 0)
-        prefs.edit().putInt(customThemeKey, customTheme).apply()
-    else
-        prefs.edit().remove(customThemeKey).apply()
-    mInstance = ColorfulDelegate(primaryColor, accentColor, darkTheme, translucent)
-}
-
-internal fun resetPrefs(context: Context) {
-    context.getSharedPreferences("io.multimoon.colorful.colorvals", Context.MODE_PRIVATE).edit().clear().apply()
 }

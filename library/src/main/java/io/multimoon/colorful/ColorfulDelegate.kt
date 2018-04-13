@@ -37,7 +37,7 @@ class ColorfulDelegate(private var primaryColor: ThemeColorInterface, private va
     }
 
     fun clear(context: Context) {
-        resetPrefs(context)
+        edit().resetPrefs(context)
     }
 
     internal fun getThemeString(): String {
