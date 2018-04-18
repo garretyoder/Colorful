@@ -156,7 +156,7 @@ Colorful().edit()
 
 ### Custom styles
 
-Colorful allows you to define custom themes (e.g. red primary color with yellow accents). If you want to use custom styles you have to do following 3 things:
+Colorful allows you to define custom themes (e.g. light red primary color with dark yellow accents). If you want to use custom styles you have to do following 3 things:
 
 1. create styles for your custom themes:
 
@@ -170,8 +170,8 @@ Colorful allows you to define custom themes (e.g. red primary color with yellow 
 	<item name="colorPrimaryDark">@color/md_red_400</item>
 </style>
 <style name="my_custom_accent_color">
-	<item name="android:colorAccent">@color/md_yellow_500</item>
-	<item name="colorAccent">@color/md_yellow_500</item>
+	<item name="android:colorAccent">@color/md_yellow_700</item>
+	<item name="colorAccent">@color/md_yellow_700</item>
 </style>
 ```
  
@@ -190,8 +190,8 @@ var myCustomColor2 = CustomThemeColor(
 	context,
 	R.style.my_custom_accent_color,
 	R.style.my_custom_accent_color,
-	R.color.md_yellow_500, // <= use the color you defined in my_custom_accent_color
-	R.color.md_yellow_500 // <= use the color you defined in my_custom_accent_color
+	R.color.md_yellow_700, // <= use the color you defined in my_custom_accent_color
+	R.color.md_yellow_700 // <= use the color you defined in my_custom_accent_color
 )
 ```
   
