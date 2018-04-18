@@ -154,7 +154,7 @@ Colorful().edit()
  ```
  The `setCustomThemeOverride` method will allow Colorful to mix a provided theme with it's own. If you wish to set specific theme items yourself, such as coloring all text orange, you can do this within a style file and then have Colorful merge it with it's own theme.
 
-### Custom styles
+### Custom theme colors
 
 Colorful allows you to define custom themes (e.g. light red primary color with dark yellow accents). If you want to use custom styles you have to do following 3 things:
 
