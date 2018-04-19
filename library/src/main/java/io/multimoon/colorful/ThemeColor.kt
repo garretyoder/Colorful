@@ -1,8 +1,62 @@
 package io.multimoon.colorful
 
+import android.content.Context
+import android.support.annotation.ColorRes
 import android.support.annotation.StyleRes
 
-enum class ThemeColor(private val primaryRes: Int, private val accentRes: Int, private val color: ColorPack) {
+interface ThemeColorInterface {
+
+    companion object {
+        fun parse(data: String): ThemeColorInterface {
+            var color: ThemeColorInterface
+            if (data.contains("|")) {
+                var nameParts = data.split("|")
+                if (nameParts.size != 4)
+                    return ThemeColor.GREEN
+                color = CustomThemeColor(nameParts[0].toInt(), nameParts[1].toInt(), nameParts[2], nameParts[3])
+            } else {
+                color = ThemeColor.valueOf(data)
+            }
+            return color
+        }
+
+        fun toString(themeColorInterface: ThemeColorInterface): String {
+            if (themeColorInterface is ThemeColor)
+                return themeColorInterface.name
+            else
+                return "${themeColorInterface.primaryStyle()}|${themeColorInterface.accentStyle()}|${themeColorInterface.getColorPack().normal().asHex()}|${themeColorInterface.getColorPack().dark().asHex()}"
+        }
+    }
+
+    @StyleRes
+    fun primaryStyle(): Int
+
+    @StyleRes
+    fun accentStyle(): Int
+
+    fun getColorPack(): ColorPack
+
+    val themeName: String
+}
+
+class CustomThemeColor(private val primaryRes: Int, private val accentRes: Int, private val color: ColorPack) : ThemeColorInterface {
+
+    constructor(primaryRes: Int, accentRes: Int, colorNormalHex: String, colorDarkHex: String) : this(primaryRes, accentRes, ColorPack(ColorfulColor(colorNormalHex), ColorfulColor(colorDarkHex)))
+
+    constructor(context: Context, primaryRes: Int, accentRes: Int, @ColorRes colorNormalRes: Int, @ColorRes colorDarkRes: Int) : this(primaryRes, accentRes, ColorPack(ColorfulColor(context, colorNormalRes), ColorfulColor(context, colorDarkRes)))
+
+    @StyleRes
+    override fun primaryStyle() = primaryRes
+
+    @StyleRes
+    override fun accentStyle() = accentRes
+
+    override fun getColorPack() = color
+
+    override val themeName: String = ThemeColorInterface.toString(this)
+}
+
+enum class ThemeColor(private val primaryRes: Int, private val accentRes: Int, private val color: ColorPack) : ThemeColorInterface {
     RED(R.style.primary0, R.style.accent0, ColorPack(ColorfulColor("#f44336"), ColorfulColor("#d32f2f"))),
     PINK(R.style.primary1, R.style.accent1, ColorPack(ColorfulColor("#e91e63"), ColorfulColor("#c2185b"))),
     PURPLE(R.style.primary2, R.style.accent2, ColorPack(ColorfulColor("#9c27b0"), ColorfulColor("#7b1fa2"))),
@@ -26,11 +80,13 @@ enum class ThemeColor(private val primaryRes: Int, private val accentRes: Int, p
     BLACK(R.style.primary20, R.style.accent20, ColorPack(ColorfulColor("#000000"), ColorfulColor("#000000")));
 
     @StyleRes
-    fun primaryStyle() = primaryRes
+    override fun primaryStyle() = primaryRes
 
     @StyleRes
-    fun accentStyle() = accentRes
+    override fun accentStyle() = accentRes
 
-    fun getColorPack() = color
+    override fun getColorPack() = color
+
+    override val themeName: String = ThemeColorInterface.toString(this)
 }
 

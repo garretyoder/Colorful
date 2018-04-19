@@ -153,3 +153,56 @@ Colorful().edit()
                 .apply(this)
  ```
  The `setCustomThemeOverride` method will allow Colorful to mix a provided theme with it's own. If you wish to set specific theme items yourself, such as coloring all text orange, you can do this within a style file and then have Colorful merge it with it's own theme.
+
+### Custom theme colors
+
+Colorful allows you to define custom themes (e.g. light red primary color with dark yellow accents). If you want to use custom styles you have to do following 3 things:
+
+1. create styles for your custom themes:
+
+```kotlin
+<style name="my_custom_primary_color">
+	<item name="android:colorPrimary">@color/md_red_200</item>
+	<item name="colorPrimary">@color/md_red_200</item>
+</style>
+<style name="my_custom_primary_dark_color">
+	<item name="android:colorPrimaryDark">@color/md_red_400</item>
+	<item name="colorPrimaryDark">@color/md_red_400</item>
+</style>
+<style name="my_custom_accent_color">
+	<item name="android:colorAccent">@color/md_yellow_700</item>
+	<item name="colorAccent">@color/md_yellow_700</item>
+</style>
+```
+ 
+ 2. Create a custom theme color object, like following:
+ 
+```kotlin
+var myCustomColor1 = CustomThemeColor(
+	context,
+	R.style.my_custom_primary_color,
+	R.style.my_custom_primary_dark_color,
+	R.color.md_red_200, // <= use the color you defined in my_custom_primary_color
+	R.color.md_red_400 // <= use the color you defined in my_custom_primary_dark_color
+)
+// used as accent color, dark color is irrelevant...
+var myCustomColor2 = CustomThemeColor(
+	context,
+	R.style.my_custom_accent_color,
+	R.style.my_custom_accent_color,
+	R.color.md_yellow_700, // <= use the color you defined in my_custom_accent_color
+	R.color.md_yellow_700 // <= use the color you defined in my_custom_accent_color
+)
+```
+  
+3. use this custom theme color object like you would use any `ThemeColor.<COLOR>` enum object, e.g.
+ 
+```kotlin
+var defaults = Defaults(
+	primaryColor = myCustomColor1,
+	accentColor = myCustomColor2,
+	useDarkTheme = true,
+	translucent = false,
+	customTheme = 0
+)
+```
