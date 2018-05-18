@@ -9,7 +9,7 @@ open class CActivity : Activity(), CThemeInterface {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        handleOnCreate(this, savedInstanceState, false)
+        handleOnCreate(this, savedInstanceState, BaseTheme.THEME_MATERIAL)
     }
 
     override fun onResume() {

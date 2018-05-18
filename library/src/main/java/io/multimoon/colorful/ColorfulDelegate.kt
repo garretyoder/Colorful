@@ -7,13 +7,15 @@ import android.util.Log
 
 class ColorfulDelegate(private var primaryColor: ThemeColor, private var accentColor: ThemeColor, private var darkTheme: Boolean, private var translucent: Boolean, private @StyleRes val customTheme: Int = 0) {
 
-    fun apply(activity: Activity, override: Boolean = true, appcompat: Boolean = false) {
-        if (appcompat) {
-            if (override) activity.setTheme(if (darkTheme) R.style.Colorful_AppCompat_Dark else R.style.Colorful_AppCompat_Light)
-            Log.d("COLORFUL", "Using appcompat theme over native material per user preference (override = ${override})")
-        } else {
-            if (override) activity.setTheme(if (darkTheme) R.style.Colorful_Dark else R.style.Colorful_Light)
+    fun apply(activity: Activity, override: Boolean = true, baseTheme: BaseTheme = BaseTheme.THEME_MATERIAL) {
+        if (override) {
+            when (baseTheme) {
+                BaseTheme.THEME_MATERIAL -> activity.setTheme(if (darkTheme) R.style.Colorful_Dark else R.style.Colorful_Light)
+                BaseTheme.THEME_APPCOMPAT -> activity.setTheme(if (darkTheme) R.style.Colorful_AppCompat_Dark else R.style.Colorful_AppCompat_Light)
+                BaseTheme.THEME_MATERIAL_COMPONETS -> activity.setTheme(if (darkTheme) R.style.Colorful_MaterialComponets_Dark else R.style.Colorful_MaterialComponets_Light)
+            }
         }
+
         activity.theme.applyStyle(primaryColor.primaryStyle(), true)
         activity.theme.applyStyle(accentColor.accentStyle(), true)
         if (customTheme != 0) {

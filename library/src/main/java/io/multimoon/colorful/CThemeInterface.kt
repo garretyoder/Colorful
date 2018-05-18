@@ -10,10 +10,10 @@ import android.view.WindowManager
 interface CThemeInterface {
     var themeString: String
 
-    fun handleOnCreate(activity: Activity, savedInstanceState: Bundle?, appcompat: Boolean, override: Boolean = true) {
+    fun handleOnCreate(activity: Activity, savedInstanceState: Bundle?, baseTheme: BaseTheme, override: Boolean = true) {
         themeString = Colorful().getThemeString()
         Log.d("COLORFUL", "Automatically applying theme (${themeString})")
-        Colorful().apply(activity, appcompat = appcompat, override = override)
+        Colorful().apply(activity, baseTheme = baseTheme, override = override)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             if (Colorful().getTranslucent()) {
                 activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)

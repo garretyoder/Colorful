@@ -11,6 +11,12 @@ val darkThemeKey: String = "dark_theme"
 val customThemeKey: String = "custom_theme"
 val translucentKey: String = "translucent"
 
+enum class BaseTheme {
+    THEME_MATERIAL,
+    THEME_APPCOMPAT,
+    THEME_MATERIAL_COMPONETS
+}
+
 fun Colorful(): ColorfulDelegate {
     mInstance?.let { return it }
     throw Exception("Colorful has not been initialized! Please call initColorful(app:Application) in your application class before working with Colorful!")

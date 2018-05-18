@@ -9,7 +9,7 @@ open class CAppCompatActivity : AppCompatActivity(), CThemeInterface {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        handleOnCreate(this, savedInstanceState, true)
+        handleOnCreate(this, savedInstanceState, BaseTheme.THEME_APPCOMPAT)
     }
 
     override fun onResume() {
