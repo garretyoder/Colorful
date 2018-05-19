@@ -80,20 +80,22 @@ ThemeColor.BLACK
 
 ### Using Themes
 
-Any `Activity` you wish to be automatically themed must inherit from either `CActivity` or `CAppCompatActivity` if you wish to use AppCompat
+Any `Activity` you wish to be automatically themed must inherit from either `CActivity`, `CAppCompatActivity` if you wish to use AppCompat or `CMaterialActivity` if you wish to use the new Material Componets theme.
 ```kotlin
 class MainActivity : CActivity()
 ```
 ```kotlin
 class MainActivity : CAppCompatActivity()
 ```
+```kotlin
+class MainActivity : CMaterialActivity()
+```
 If you wish to use your own activity, you can manually apply Colorful's theme to any activity using `apply(activity:Activity)`
 ```kotlin
-Colorful().apply(this, override = true, appcompat = false)
+Colorful().apply(this, override = true, baseTheme = BaseTheme.THEME_MATERIAL)
 ```
 The `override` value will control whether Colorful overrides your activitie's existing base theme, or merely sets primary and accent colors. **Note**: dark/light themeing will not work when override is disabled
-The `appcompat` value will control which base theme Colorful will use, Appcompat or Material
-*Note*: The override value is optional and may be omitted. Default value is true.
+The `baseTheme` value will control which base theme Colorful will use, Appcompat, Material, or Material Componets.
 
 Alternatively, as of Colorful 2.1, you can now have your activity inherit from the interface `CThemeInterface` which will provide the `handleOnCreate` and `handleOnResume` methods for automatic theme handling.
 See both [CActivity](https://github.com/garretyoder/Colorful/blob/master/library/src/main/java/io/multimoon/colorful/CActivity.kt) and [CAppCompatActivity](https://github.com/garretyoder/Colorful/blob/master/library/src/main/java/io/multimoon/colorful/CAppCompatActivity.kt) for examples on how to implement the `CThemeInterface`
