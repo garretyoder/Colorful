@@ -18,6 +18,8 @@
     <style name="accent0">
         <item name="android:colorAccent">@color/md_red_500</item>
         <item name="colorAccent">@color/md_red_500</item>
+        <item name="android:colorSecondary">@color/md_red_500</item>
+        <item name="colorSecondary">@color/md_red_500</item>
     </style>
 
     <style name="primary1">
@@ -30,6 +32,8 @@
     <style name="accent1">
         <item name="android:colorAccent">@color/md_pink_500</item>
         <item name="colorAccent">@color/md_pink_500</item>
+        <item name="android:colorSecondary">@color/md_pink_500</item>
+        <item name="colorSecondary">@color/md_pink_500</item>
     </style>
 
     <style name="primary2">
@@ -42,6 +46,8 @@
     <style name="accent2">
         <item name="android:colorAccent">@color/md_purple_500</item>
         <item name="colorAccent">@color/md_purple_500</item>
+        <item name="android:colorSecondary">@color/md_purple_500</item>
+        <item name="colorSecondary">@color/md_purple_500</item>
     </style>
 
     <style name="primary3">
@@ -54,6 +60,8 @@
     <style name="accent3">
         <item name="android:colorAccent">@color/md_deep_purple_500</item>
         <item name="colorAccent">@color/md_deep_purple_500</item>
+        <item name="android:colorSecondary">@color/md_deep_purple_500</item>
+        <item name="colorSecondary">@color/md_deep_purple_500</item>
     </style>
 
     <style name="primary4">
@@ -66,6 +74,8 @@
     <style name="accent4">
         <item name="android:colorAccent">@color/md_indigo_500</item>
         <item name="colorAccent">@color/md_indigo_500</item>
+        <item name="android:colorSecondary">@color/md_indigo_500</item>
+        <item name="colorSecondary">@color/md_indigo_500</item>
     </style>
 
     <style name="primary5">
@@ -78,6 +88,8 @@
     <style name="accent5">
         <item name="android:colorAccent">@color/md_blue_500</item>
         <item name="colorAccent">@color/md_blue_500</item>
+        <item name="android:colorSecondary">@color/md_blue_500</item>
+        <item name="colorSecondary">@color/md_blue_500</item>
     </style>
 
     <style name="primary6">
@@ -90,6 +102,8 @@
     <style name="accent6">
         <item name="android:colorAccent">@color/md_light_blue_500</item>
         <item name="colorAccent">@color/md_light_blue_500</item>
+        <item name="android:colorSecondary">@color/md_light_blue_500</item>
+        <item name="colorSecondary">@color/md_light_blue_500</item>
     </style>
 
     <style name="primary7">
@@ -102,6 +116,8 @@
     <style name="accent7">
         <item name="android:colorAccent">@color/md_cyan_500</item>
         <item name="colorAccent">@color/md_cyan_500</item>
+        <item name="android:colorSecondary">@color/md_cyan_500</item>
+        <item name="colorSecondary">@color/md_cyan_500</item>
     </style>
 
     <style name="primary8">
@@ -114,6 +130,8 @@
     <style name="accent8">
         <item name="android:colorAccent">@color/md_teal_500</item>
         <item name="colorAccent">@color/md_teal_500</item>
+        <item name="android:colorSecondary">@color/md_teal_500</item>
+        <item name="colorSecondary">@color/md_teal_500</item>
     </style>
 
     <style name="primary9">
@@ -126,6 +144,8 @@
     <style name="accent9">
         <item name="android:colorAccent">@color/md_green_500</item>
         <item name="colorAccent">@color/md_green_500</item>
+        <item name="android:colorSecondary">@color/md_green_500</item>
+        <item name="colorSecondary">@color/md_green_500</item>
     </style>
 
     <style name="primary10">
@@ -138,6 +158,8 @@
     <style name="accent10">
         <item name="android:colorAccent">@color/md_light_green_500</item>
         <item name="colorAccent">@color/md_light_green_500</item>
+        <item name="android:colorSecondary">@color/md_light_green_500</item>
+        <item name="colorSecondary">@color/md_light_green_500</item>
     </style>
 
     <style name="primary11">
@@ -150,6 +172,8 @@
     <style name="accent11">
         <item name="android:colorAccent">@color/md_lime_500</item>
         <item name="colorAccent">@color/md_lime_500</item>
+        <item name="android:colorSecondary">@color/md_lime_500</item>
+        <item name="colorSecondary">@color/md_lime_500</item>
     </style>
 
     <style name="primary12">
@@ -162,6 +186,8 @@
     <style name="accent12">
         <item name="android:colorAccent">@color/md_yellow_500</item>
         <item name="colorAccent">@color/md_yellow_500</item>
+        <item name="android:colorSecondary">@color/md_yellow_500</item>
+        <item name="colorSecondary">@color/md_yellow_500</item>
     </style>
 
     <style name="primary13">
@@ -174,6 +200,8 @@
     <style name="accent13">
         <item name="android:colorAccent">@color/md_amber_500</item>
         <item name="colorAccent">@color/md_amber_500</item>
+        <item name="android:colorSecondary">@color/md_amber_500</item>
+        <item name="colorSecondary">@color/md_amber_500</item>
     </style>
 
     <style name="primary14">
@@ -186,6 +214,8 @@
     <style name="accent14">
         <item name="android:colorAccent">@color/md_orange_500</item>
         <item name="colorAccent">@color/md_orange_500</item>
+        <item name="android:colorSecondary">@color/md_orange_500</item>
+        <item name="colorSecondary">@color/md_orange_500</item>
     </style>
 
     <style name="primary15">
@@ -198,6 +228,8 @@
     <style name="accent15">
         <item name="android:colorAccent">@color/md_deep_orange_500</item>
         <item name="colorAccent">@color/md_deep_orange_500</item>
+        <item name="android:colorSecondary">@color/md_deep_orange_500</item>
+        <item name="colorSecondary">@color/md_deep_orange_500</item>
     </style>
 
     <style name="primary16">
@@ -210,6 +242,8 @@
     <style name="accent16">
         <item name="android:colorAccent">@color/md_brown_500</item>
         <item name="colorAccent">@color/md_brown_500</item>
+        <item name="android:colorSecondary">@color/md_brown_500</item>
+        <item name="colorSecondary">@color/md_brown_500</item>
     </style>
 
     <style name="primary17">
@@ -222,6 +256,8 @@
     <style name="accent17">
         <item name="android:colorAccent">@color/md_grey_500</item>
         <item name="colorAccent">@color/md_grey_500</item>
+        <item name="android:colorSecondary">@color/md_grey_500</item>
+        <item name="colorSecondary">@color/md_grey_500</item>
     </style>
 
     <style name="primary18">
@@ -234,6 +270,8 @@
     <style name="accent18">
         <item name="android:colorAccent">@color/md_blue_grey_500</item>
         <item name="colorAccent">@color/md_blue_grey_500</item>
+        <item name="android:colorSecondary">@color/md_blue_grey_500</item>
+        <item name="colorSecondary">@color/md_blue_grey_500</item>
     </style>
 
     <style name="primary19">
@@ -246,6 +284,8 @@
     <style name="accent19">
         <item name="android:colorAccent">@color/md_white_1000</item>
         <item name="colorAccent">@color/md_white_1000</item>
+        <item name="android:colorSecondary">@color/md_white_1000</item>
+        <item name="colorSecondary">@color/md_white_1000</item>
     </style>
 
     <style name="primary20">
@@ -258,6 +298,8 @@
     <style name="accent20">
         <item name="android:colorAccent">@color/md_black_1000</item>
         <item name="colorAccent">@color/md_black_1000</item>
+        <item name="android:colorSecondary">@color/md_black_1000</item>
+        <item name="colorSecondary">@color/md_black_1000</item>
     </style>
 
 </resources>
