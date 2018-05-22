@@ -80,13 +80,14 @@ ThemeColor.BLACK
 
 ### Using Themes
 
-Any `Activity` you wish to be automatically themed must inherit from either `CActivity`, `CAppCompatActivity` if you wish to use AppCompat or `CMaterialActivity` if you wish to use the new Material Componets theme.
+Any `Activity` you wish to be automatically themed must inherit from either `CActivity`, `CAppCompatActivity` if you wish to use AppCompat or `CMaterialActivity` if you wish to use the new Material Componets theme. *Note* The material componets theme is still beta and is available only in the testing android-p branch. To use the material-componets theme, please add the android-p colorful branch to your gradle build.
 ```kotlin
 class MainActivity : CActivity()
 ```
 ```kotlin
 class MainActivity : CAppCompatActivity()
 ```
+*Only available in the android-p branch*
 ```kotlin
 class MainActivity : CMaterialActivity()
 ```
