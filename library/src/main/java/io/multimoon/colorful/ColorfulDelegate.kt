@@ -2,7 +2,7 @@ package io.multimoon.colorful
 
 import android.app.Activity
 import android.content.Context
-import android.support.annotation.StyleRes
+import androidx.annotation.StyleRes
 import android.util.Log
 
 class ColorfulDelegate(private var primaryColor: ThemeColorInterface, private var accentColor: ThemeColorInterface, private var darkTheme: Boolean, private var translucent: Boolean, private @StyleRes val customTheme: Int = 0) {
