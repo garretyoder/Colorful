@@ -13,8 +13,7 @@ val translucentKey: String = "translucent"
 
 enum class BaseTheme {
     THEME_MATERIAL,
-    THEME_APPCOMPAT,
-    THEME_MATERIAL_COMPONETS
+    THEME_APPCOMPAT
 }
 
 fun Colorful(): ColorfulDelegate {

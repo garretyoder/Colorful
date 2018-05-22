@@ -5,8 +5,6 @@
     <style name="Colorful.Dark" parent="android:Theme.Material.NoActionBar"/>
     <style name="Colorful.AppCompat.Light" parent="Theme.AppCompat.Light.NoActionBar"/>
     <style name="Colorful.AppCompat.Dark" parent="Theme.AppCompat.NoActionBar"/>
-    <style name="Colorful.MaterialComponets.Light" parent="Theme.MaterialComponents.Light.NoActionBar"/>
-    <style name="Colorful.MaterialComponets.Dark" parent="Theme.MaterialComponents.NoActionBar"/>
 
     <style name="primary0">
         <item name="android:colorPrimary">@color/md_red_500</item>

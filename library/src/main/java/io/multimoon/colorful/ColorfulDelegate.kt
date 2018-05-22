@@ -12,7 +12,6 @@ class ColorfulDelegate(private var primaryColor: ThemeColorInterface, private va
             when (baseTheme) {
                 BaseTheme.THEME_MATERIAL -> activity.setTheme(if (darkTheme) R.style.Colorful_Dark else R.style.Colorful_Light)
                 BaseTheme.THEME_APPCOMPAT -> activity.setTheme(if (darkTheme) R.style.Colorful_AppCompat_Dark else R.style.Colorful_AppCompat_Light)
-                BaseTheme.THEME_MATERIAL_COMPONETS -> activity.setTheme(if (darkTheme) R.style.Colorful_MaterialComponets_Dark else R.style.Colorful_MaterialComponets_Light)
             }
         }
 
