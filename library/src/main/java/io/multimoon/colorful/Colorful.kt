@@ -2,6 +2,7 @@ package io.multimoon.colorful
 
 import android.app.Application
 import android.content.Context
+import android.support.annotation.RequiresApi
 import android.util.Log
 
 var mInstance: ColorfulDelegate? = null
@@ -12,8 +13,8 @@ val customThemeKey: String = "custom_theme"
 val translucentKey: String = "translucent"
 
 enum class BaseTheme {
-    THEME_MATERIAL,
-    THEME_APPCOMPAT
+    @RequiresApi(21) THEME_MATERIAL,
+    @RequiresApi(14) THEME_APPCOMPAT
 }
 
 fun Colorful(): ColorfulDelegate {

@@ -7,7 +7,7 @@ import android.util.Log
 
 class ColorfulDelegate(private var primaryColor: ThemeColorInterface, private var accentColor: ThemeColorInterface, private var darkTheme: Boolean, private var translucent: Boolean, private @StyleRes val customTheme: Int = 0) {
 
-    fun apply(activity: Activity, override: Boolean = true, baseTheme: BaseTheme = BaseTheme.THEME_MATERIAL) {
+    fun apply(activity: Activity, override: Boolean = true, baseTheme: BaseTheme = BaseTheme.THEME_APPCOMPAT) {
         if (override) {
             when (baseTheme) {
                 BaseTheme.THEME_MATERIAL -> activity.setTheme(if (darkTheme) R.style.Colorful_Dark else R.style.Colorful_Light)
