@@ -133,7 +133,7 @@ Colorful().edit()
 
 ### Getting the current theme values
 
-Colorful can provide you with hex string, or android rgb int formatted values for the currently set colors. This is acheived through the `ColorPack` class, which is a pack that contains both dark and normal variants of the color. These are based off the Material Color Pallet 500 (normal) and 700 (dark) values. Examples are shown below.
+Colorful can provide you with hex string, or android rgb int formatted values for the currently set colors. This is achieved through the `ColorPack` class, which is a pack that contains both dark and normal variants of the color. These are based off the Material Color Pallet 500 (normal) and 700 (dark) values. Examples are shown below.
 ```kotlin
 Colorful().getPrimaryColor().getColorPack().dark().asInt()
 Colorful().getAccentColor().getColorPack().normal().asHex()
