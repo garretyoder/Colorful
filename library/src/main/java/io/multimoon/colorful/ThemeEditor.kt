@@ -40,6 +40,10 @@ class ThemeEditor(internal var primaryColor: ThemeColorInterface = ThemeColor.IN
         callback()
     }
 
+    fun apply(context: Context) {
+        applyEdits(context, primaryColor, accentColor, darkTheme, translucent, customTheme)
+    }
+
     private fun applyEdits(context: Context, primaryColor: ThemeColorInterface, accentColor: ThemeColorInterface, darkTheme: Boolean, translucent: Boolean, customTheme: Int = 0) {
         val prefs = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
         prefs.edit()
