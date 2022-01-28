@@ -16,14 +16,14 @@ interface CThemeInterface {
         Colorful().apply(activity, baseTheme = baseTheme, override = override)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             if (Colorful().getTranslucent()) {
-                activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+                activity.window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
             }
             activity.setTaskDescription(ActivityManager.TaskDescription(null, null, Colorful().getPrimaryColor().getColorPack().dark().asInt()))
         }
     }
 
     fun handleOnResume(activity: Activity) {
-        if (!themeString.isBlank() && !themeString.equals(Colorful().getThemeString())) {
+        if (themeString.isNotBlank() && themeString != Colorful().getThemeString()) {
             themeString = Colorful().getThemeString()
             activity.recreate()
             Log.d("COLORFUL", "Theme change detected, reloading activity (${themeString})")

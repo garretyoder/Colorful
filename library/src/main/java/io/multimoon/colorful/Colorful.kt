@@ -13,8 +13,11 @@ val customThemeKey: String = "custom_theme"
 val translucentKey: String = "translucent"
 
 enum class BaseTheme {
-    @RequiresApi(21) THEME_MATERIAL,
-    @RequiresApi(14) THEME_APPCOMPAT
+    @RequiresApi(21)
+    THEME_MATERIAL,
+    @RequiresApi(14)
+    THEME_APPCOMPAT,
+    THEME_MATERIAL_YOU
 }
 
 fun Colorful(): ColorfulDelegate {
@@ -26,15 +29,18 @@ fun initColorful(app: Application, defaults: Defaults = Defaults(ThemeColor.INDI
     val time: Long = System.currentTimeMillis()
     val prefs = app.getSharedPreferences(ThemeEditor.PREF_NAME, Context.MODE_PRIVATE)
 
-    var primary: ThemeColorInterface = ThemeColorInterface.parse(prefs.getString(primaryThemeKey, defaults.primaryColor.themeName))
-    var accent: ThemeColorInterface = ThemeColorInterface.parse(prefs.getString(accentThemeKey, defaults.accentColor.themeName))
+    val primary: ThemeColorInterface =
+        ThemeColorInterface.parse(prefs.getString(primaryThemeKey, defaults.primaryColor.themeName))
+    val accent: ThemeColorInterface =
+        ThemeColorInterface.parse(prefs.getString(accentThemeKey, defaults.accentColor.themeName))
 
     mInstance = ColorfulDelegate(
-            primary,
-            accent,
-            prefs.getBoolean(darkThemeKey, defaults.useDarkTheme),
-            prefs.getBoolean(translucentKey, defaults.translucent),
-            prefs.getInt(customThemeKey, defaults.customTheme))
+        primary,
+        accent,
+        prefs.getBoolean(darkThemeKey, defaults.useDarkTheme),
+        prefs.getBoolean(translucentKey, defaults.translucent),
+        prefs.getInt(customThemeKey, defaults.customTheme)
+    )
 
     Log.d("COLORFUL", "Colorful init in " + (System.currentTimeMillis() - time) + " milliseconds!")
 }

@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Context
 import android.util.Log
 import androidx.annotation.StyleRes
+import io.multimoon.colorful.BaseTheme.THEME_MATERIAL_YOU
 
 class ColorfulDelegate(
     private var primaryColor: ThemeColorInterface,
@@ -23,6 +24,7 @@ class ColorfulDelegate(
             when (baseTheme) {
                 BaseTheme.THEME_MATERIAL -> activity.setTheme(if (darkTheme) R.style.Colorful_Dark else R.style.Colorful_Light)
                 BaseTheme.THEME_APPCOMPAT -> activity.setTheme(if (darkTheme) R.style.Colorful_AppCompat_Dark else R.style.Colorful_AppCompat_Light)
+                THEME_MATERIAL_YOU -> activity.setTheme(if (darkTheme) R.style.Colorful_MaterialYou_Dark else R.style.Colorful_MaterialYou_Light)
             }
         }
 

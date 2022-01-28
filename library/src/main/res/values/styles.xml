@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools"  tools:ignore="NewApi">
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="NewApi">
     <!-- BASE THEMES -->
-    <style name="Colorful.Light" parent="android:Theme.Material.Light.NoActionBar"/>
-    <style name="Colorful.Dark" parent="android:Theme.Material.NoActionBar"/>
-    <style name="Colorful.AppCompat.Light" parent="Theme.AppCompat.Light.NoActionBar"/>
-    <style name="Colorful.AppCompat.Dark" parent="Theme.AppCompat.NoActionBar"/>
+    <style name="Colorful.Light" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Colorful.Dark" parent="android:Theme.Material.NoActionBar" />
+
+    <style name="Colorful.AppCompat.Light" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="Colorful.AppCompat.Dark" parent="Theme.AppCompat.NoActionBar" />
+
+    <style name="Colorful.MaterialYou.Light" parent="Theme.Material3.Light.NoActionBar" />
+
+    <style name="Colorful.MaterialYou.Dark" parent="Theme.Material3.Dark.NoActionBar" />
 
     <style name="primary0">
         <item name="android:colorPrimary">@color/md_red_500</item>
