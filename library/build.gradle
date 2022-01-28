@@ -1,8 +1,7 @@
 apply plugin: 'com.android.library'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.jetbrains.dokka'
 
 android {
     compileSdkVersion 31
@@ -23,3 +22,6 @@ dependencies {
     compileOnly 'androidx.appcompat:appcompat:1.4.1'
     compileOnly 'com.google.android.material:material:1.6.0-alpha02'
 }
+
+
+apply from: 'gradle-mvn-push.gradle'
