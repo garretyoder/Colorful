@@ -1,8 +1,8 @@
 package io.multimoon.colorful
 
 import android.content.Context
-import android.support.annotation.StyleRes
 import android.util.Log
+import androidx.annotation.StyleRes
 
 class ThemeEditor(internal var primaryColor: ThemeColorInterface = ThemeColor.INDIGO, internal var accentColor: ThemeColorInterface = ThemeColor.RED, internal var darkTheme: Boolean = true, internal var translucent: Boolean, internal @StyleRes var customTheme: Int = 0) {
 

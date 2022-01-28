@@ -1,16 +1,18 @@
 package io.multimoon.colorful
 
 import android.content.Context
-import android.support.annotation.ColorRes
-import android.support.annotation.StyleRes
+import androidx.annotation.ColorRes
+import androidx.annotation.StyleRes
 
 interface ThemeColorInterface {
 
     companion object {
-        fun parse(data: String): ThemeColorInterface {
-            var color: ThemeColorInterface
+        fun parse(data: String?): ThemeColorInterface {
+            data ?: return ThemeColor.BLUE
+
+            val color: ThemeColorInterface
             if (data.contains("|")) {
-                var nameParts = data.split("|")
+                val nameParts = data.split("|")
                 if (nameParts.size != 4)
                     return ThemeColor.GREEN
                 color = CustomThemeColor(nameParts[0].toInt(), nameParts[1].toInt(), nameParts[2], nameParts[3])

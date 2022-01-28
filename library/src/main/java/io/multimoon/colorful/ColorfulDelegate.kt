@@ -1,13 +1,24 @@
 package io.multimoon.colorful
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
-import android.support.annotation.StyleRes
 import android.util.Log
+import androidx.annotation.StyleRes
 
-class ColorfulDelegate(private var primaryColor: ThemeColorInterface, private var accentColor: ThemeColorInterface, private var darkTheme: Boolean, private var translucent: Boolean, private @StyleRes val customTheme: Int = 0) {
+class ColorfulDelegate(
+    private var primaryColor: ThemeColorInterface,
+    private var accentColor: ThemeColorInterface,
+    private var darkTheme: Boolean,
+    private var translucent: Boolean,
+    @StyleRes private val customTheme: Int = 0
+) {
 
-    fun apply(activity: Activity, override: Boolean = true, baseTheme: BaseTheme = BaseTheme.THEME_APPCOMPAT) {
+    @SuppressLint("NewApi") fun apply(
+        activity: Activity,
+        override: Boolean = true,
+        baseTheme: BaseTheme = BaseTheme.THEME_APPCOMPAT
+    ) {
         if (override) {
             when (baseTheme) {
                 BaseTheme.THEME_MATERIAL -> activity.setTheme(if (darkTheme) R.style.Colorful_Dark else R.style.Colorful_Light)

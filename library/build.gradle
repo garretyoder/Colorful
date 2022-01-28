@@ -8,7 +8,7 @@ android {
     compileSdkVersion 31
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 27
+        targetSdkVersion 30
     }
     buildTypes {
         release {
@@ -20,5 +20,6 @@ android {
 
 dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    compileOnly 'androidx.appcompat:appcompat:1.4.1'
+    compileOnly 'com.google.android.material:material:1.6.0-alpha02'
 }

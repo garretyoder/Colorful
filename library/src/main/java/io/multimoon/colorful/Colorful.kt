@@ -2,8 +2,8 @@ package io.multimoon.colorful
 
 import android.app.Application
 import android.content.Context
-import android.support.annotation.RequiresApi
 import android.util.Log
+import androidx.annotation.RequiresApi
 
 var mInstance: ColorfulDelegate? = null
 val primaryThemeKey: String = "primary_theme"
