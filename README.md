@@ -1,12 +1,17 @@
 <img src="screenshots/Colorful.png" width="200">
 
-# Colorful
-[![Release](https://jitpack.io/v/garretyoder/Colorful.svg)](https://jitpack.io/#garretyoder/Colorful) [![Build Status](https://travis-ci.org/garretyoder/Colorful.svg?branch=master)](https://travis-ci.org/garretyoder/Colorful)
+# Edited
 
+1. Add `Material You` BaseTheme
+
+# Colorful
+
+[![Release](https://jitpack.io/v/garretyoder/Colorful.svg)](https://jitpack.io/#garretyoder/Colorful) [![Build Status](https://travis-ci.org/garretyoder/Colorful.svg?branch=master)](https://travis-ci.org/garretyoder/Colorful)
 
 Colorful is a dynamic theme library allowing you to change your apps' color schemes easily.
 
-*Colorful v2 is here! v2 has been rewritten from the ground up in Kotlin to be lighter, faster, and more feature-packed*
+*Colorful v2 is here! v2 has been rewritten from the ground up in Kotlin to be lighter, faster, and
+more feature-packed*
 
 ## License
 
@@ -20,18 +25,20 @@ Copyright 2018 Garret Yoder
 
 ## Installation
 Add jitpack to your maven sources
+
 ```groovy
 allprojects {
     repositories {
         ...
-        maven { url "https://jitpack.io" }
+        maven { url 'https://raw.githubusercontent.com/Ayagikei/mvn-repo/main/release' }
+        maven { url 'https://raw.githubusercontent.com/Ayagikei/mvn-repo/main/snapshots' }
     }
 }
 ```
 Add Colorful as a dependency to your `build.gradle`
 ```groovy
 dependencies {
-    implementation 'com.github.garretyoder:Colorful:2.3.4'
+    implementation 'fun.lifeupapp:colorful:3.0.1-SNAPSHOT'
 }
 ```
 

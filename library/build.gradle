@@ -24,4 +24,4 @@ dependencies {
 }
 
 
-apply from: 'gradle-mvn-push.gradle'
+apply from: 'https://raw.githubusercontent.com/Ayagikei/mvn-repo/main/gradle-mvn-push.gradle'
