@@ -1,3 +1,6 @@
+# Discontinued
+Android has had native themeing for awhile now, so Colorful's purpose has been served and the library has been discontinued.
+
 <img src="screenshots/Colorful.png" width="200">
 
 # Colorful
